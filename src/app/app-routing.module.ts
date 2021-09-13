@@ -4,17 +4,13 @@ import { AgencyComponent } from './layouts/agency/agency.component';
 export const routes: Routes = [
   {
     path: '',
-    redirectTo: 'agency',
-    pathMatch: 'full',
-  },
-  {
-    path: 'agency',
     component: AgencyComponent,
     data: {
       title: "Cabir | Consultoria de negócios de TI",
       content: "Agência de Design e Desenvolvimento Web"
-    }
-  }
+    },
+    pathMatch: 'full',
+  },
 ];
 
 @NgModule({

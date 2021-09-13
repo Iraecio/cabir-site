@@ -17,6 +17,22 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "allowedCommonJsDependencies": [
+              "ngx-masonry",
+              "rxjs/add/operator/map",
+              "rxjs/internal/operators",
+              "masonry-layout",
+              "imagesloaded",
+              "rxjs/Subject",
+              "rxjs-compat/add/operator/map",
+              "rxjs/operators",
+              "mousetrap",
+              "hammerjs",
+              "ngx-masonry",
+              "@ks89/angular-modal-gallery",
+              "rxjs/Subscription",
+              "rxjs-compat/Subject"
+            ],
             "aot": true,
             "outputPath": "dist/browser",
             "index": "src/index.html",

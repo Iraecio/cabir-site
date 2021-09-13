@@ -1,35 +1,33 @@
-import {BrowserModule} from '@angular/platform-browser';
-import {NgModule} from '@angular/core';
-import {AppRoutingModule} from './app-routing.module';
-import {RouterModule, Routes, PreloadAllModules} from '@angular/router';
-import {routes} from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RouterModule } from '@angular/router';
+import { ScrollToModule } from 'ng2-scroll-to-el';
+import { CarouselModule } from 'ngx-owl-carousel-o';
+import { AppRoutingModule, routes } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { LayoutsModule } from './layouts/layouts.module';
+import { SharedModule } from './shared/shared.module';
 
-import {AppComponent} from './app.component';
-import {LayoutsModule} from './layouts/layouts.module'
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {HttpClientModule} from '@angular/common/http';
-import {CarouselModule} from 'ngx-owl-carousel-o';
-import {ScrollToModule} from 'ng2-scroll-to-el';
-import {SharedModule} from './shared/shared.module'
 
 @NgModule({
-    declarations: [
-        AppComponent
-    ],
-    imports: [
-        BrowserModule.withServerTransition({appId: 'serverApp'}),
-        AppRoutingModule,
-        BrowserAnimationsModule,
-        LayoutsModule,
-        HttpClientModule,
-        CarouselModule,
-        ScrollToModule,
-        SharedModule,
-        RouterModule.forRoot(routes, {useHash: false, anchorScrolling: 'enabled', scrollPositionRestoration: 'enabled'})
+  declarations: [
+    AppComponent,
+  ],
+  imports: [
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    LayoutsModule,
+    HttpClientModule,
+    CarouselModule,
+    ScrollToModule,
+    SharedModule,
+    RouterModule.forRoot(routes, { useHash: false, anchorScrolling: 'enabled', scrollPositionRestoration: 'enabled' })
 
-    ],
-    providers: [],
-    bootstrap: [AppComponent]
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
 })
-export class AppModule {
-}
+export class AppModule { }

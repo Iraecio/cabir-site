@@ -9,7 +9,11 @@ export const routes: Routes = [
   },
   {
     path: 'agency',
-    component: AgencyComponent
+    component: AgencyComponent,
+    data: {
+      title: "Cabir | Consultoria de negócios de TI",
+      content: "Agência de Design e Desenvolvimento Web"
+    }
   }
 ];
 
